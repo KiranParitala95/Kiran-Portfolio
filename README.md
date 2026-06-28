@@ -2,7 +2,7 @@
 
 Personal portfolio website showcasing my work as a **Data Engineer** and **AI/ML Engineer** with 2+ years of production experience across AWS, GCP, and Azure.
 
-🌐 **Live:** [kiran-portfolio.vercel.app](https://kiran-portfolio.vercel.app) <!-- update with your domain -->
+🌐 **Live:** [kiran-portfolio.vercel.app]([kiranparitala.dev](https://kiranparitala.dev)) <!-- update with your domain -->
 
 ---
 
