@@ -357,7 +357,7 @@ body.light .ab-section-label{color:var(--g2)}
 body.light .mtg{color:var(--mu);background:var(--sf);border-color:rgba(30,20,5,.1)}
 body.light .mtg:hover{border-color:var(--g1);color:var(--g1)}
 /* project panels */
-body.light .h-panel{background:var(--bg) !important}
+body.light .h-panel{background:var(--bg)}
 body.light .h-era{color:var(--g2)}
 body.light .h-ptit{color:var(--tx)}
 body.light .h-pdesc{color:var(--mu)}
@@ -396,7 +396,6 @@ body.light .eyl{background:var(--g1)}
 body.light .eyt{color:var(--g2)}
 body.light .sec-sweep{background:linear-gradient(90deg,var(--g1),transparent)}
 body.light .h-label{color:var(--g2)}
-body.light .h-era{color:var(--g2)}
 body.light .h-rail{background:rgba(122,92,10,.08)}
 body.light .h-dot{border-color:var(--g2)}
 body.light .h-dot.cur{background:var(--g1);border-color:var(--g1)}
@@ -524,7 +523,7 @@ body.light .proj-modal{border-left-color:rgba(122,92,10,.15)}
 
       <div class="about-body">
 
-        <p class="ab-p rv">I'm <strong class="ab-hi">Kiran Paritala</strong> — a Data Engineer and AI/ML Engineer with an MS in Computer Science from Cleveland State University (May 2026). I build systems that move data reliably at scale and layer intelligence on top of it. At Airtel — India's largest telecom — I spent nearly three years engineering petabyte-scale ETL pipelines, Medallion Architecture across Azure and GCP, and real-time Kafka streaming systems. During my MS, I built four production-grade AI/ML projects: a Water Quality ML Pipeline, a zero-cost RAG chatbot, an autonomous LangGraph AI agent, and a Retail BI pipeline serving Power BI dashboards.</p>
+        <p class="ab-p rv">I'm <strong class="ab-hi">Kiran Paritala</strong> — a Data Engineer and AI/ML Engineer with an MS in Computer Science from Cleveland State University (May 2026). I build systems that move data reliably at scale and layer intelligence on top of it. At Airtel — India's largest telecom — I spent nearly three years engineering petabyte-scale ETL pipelines, Medallion Architecture across Azure and GCP, and real-time Kafka streaming systems. During my MS, I built five production-grade AI/ML projects: a Water Quality ML Pipeline, a zero-cost RAG chatbot, an autonomous LangGraph AI agent, a Retail BI pipeline serving Power BI dashboards, and MedSentry — an AI-powered medical triage system.</p>
 
         <div class="ab-section-label rv">How I Find and Solve Problems</div>
 
@@ -573,24 +572,21 @@ body.light .proj-modal{border-left-color:rgba(122,92,10,.15)}
       <div class="h-chips"><span class="h-chip">LangChain</span><span class="h-chip">LangGraph</span><span class="h-chip">Groq Llama 3.3</span><span class="h-chip">pandas</span></div>
       <div class="h-panel-footer"><a class="h-cta-btn" href="https://github.com/KiranParitala95/Ask-Athreya" target="_blank" rel="noopener">&#9654; View on GitHub</a><div class="h-progress"><div class="h-dot"></div><div class="h-dot"></div><div class="h-dot cur"></div><div class="h-dot"></div><div class="h-dot"></div></div></div>
     </div>
-    <div class="h-panel">
+    <div class="h-panel" style="background:linear-gradient(135deg,#070707,#0a0800)">
       <div class="h-era" style="color:var(--g1)">Personal Project &#183; ETL &#183; Business Intelligence</div>
       <h3 class="h-ptit">Retail Product Performance Dashboard</h3>
       <div class="h-kpis"><span class="h-kpi"><strong>Daily&nbsp;6AM</strong><br>Airflow DAG</span><span class="h-kpi-sep"></span><span class="h-kpi"><strong>5 KPIs</strong><br>Revenue Tracked</span><span class="h-kpi-sep"></span><span class="h-kpi"><strong>4 Sources</strong><br>Ingested</span></div>
       <p class="h-pdesc">Daily ETL pipeline ingesting retail order data from PostgreSQL, REST APIs, and S3 CSV files into Databricks. PySpark Medallion Architecture (Bronze&#8594;Silver&#8594;Gold) with dbt staging and mart models calculating monthly revenue, MoM growth, revenue rank, and top 10 products. Data quality framework covers null checks, duplicate detection, and referential integrity validation. Orchestrated with Apache Airflow at 6AM daily with retry logic and failure alerting. Analytics-ready data loaded to Snowflake and BigQuery — served via Power BI semantic models.</p>
       <div class="h-chips"><span class="h-chip">PySpark</span><span class="h-chip">dbt</span><span class="h-chip">Airflow</span><span class="h-chip">Databricks</span><span class="h-chip">Snowflake</span></div>
-      <div class="h-panel-footer"><a class="h-cta-btn" href="https://github.com/KiranParitala95/Retail-Product-Performance-Dashboard" target="_blank" rel="noopener">&#9654; View on GitHub</a><div class="h-progress"><div class="h-dot"></div><div class="h-dot"></div><div class="h-dot"></div><div class="h-dot cur" style="background:var(--g3);box-shadow:0 0 8px var(--g3)"></div><div class="h-dot"></div></div></div>
+      <div class="h-panel-footer"><a class="h-cta-btn" href="https://github.com/KiranParitala95/Retail-Product-Performance-Dashboard" target="_blank" rel="noopener">&#9654; View on GitHub</a><div class="h-progress"><div class="h-dot"></div><div class="h-dot"></div><div class="h-dot"></div><div class="h-dot cur"></div><div class="h-dot"></div></div></div>
     </div>
-
-    <!-- PROJECT 05: MedSentry -->
     <div class="h-panel">
-      <div class="h-era">Personal Project &#183; Agentic AI &#183; Healthcare &#183; Safety</div>
-      <h3 class="h-ptit">MedSentry &#8212; AI-Powered Health Triage System</h3>
-      <div class="h-kpis"><span class="h-kpi"><strong>&lt;30s</strong><br>Email to Reply</span><span class="h-kpi-sep"></span><span class="h-kpi"><strong>20+</strong><br>Safety Guardrails</span><span class="h-kpi-sep"></span><span class="h-kpi"><strong>50+</strong><br>Adversarial Tests</span></div>
-      <p class="h-pdesc">A patient emails symptoms to a clinic inbox and receives a safety-checked medical reply in under 30 seconds. A 3-agent LangChain pipeline extracts structured symptom data, researches the condition via live web search (Tavily), and routes the reply through a 3-tier triage system — self-care, prompt attention, or emergency escalation. 20+ deterministic Python guardrails verify, correct, or override the model before anything reaches a patient. Pylint 9.49/10 · zero Bandit findings · zero Ruff issues.</p>
-      <div class="h-chips"><span class="h-chip">LangChain</span><span class="h-chip">Groq LLaMA 3.3</span><span class="h-chip">Tavily API</span><span class="h-chip">Gmail API</span><span class="h-chip">DeepEval</span><span class="h-chip">SQLite</span><span class="h-chip">Python</span></div>
-      <div class="h-panel-footer"><a class="h-cta-btn" href="https://github.com/KiranParitala95/MedSentry" target="_blank" rel="noopener">&#9654; View on GitHub</a><div class="h-progress"><div class="h-dot"></div><div class="h-dot"></div><div class="h-dot"></div><div class="h-dot"></div><div class="h-dot cur" style="background:var(--g3);box-shadow:0 0 8px var(--g3)"></div></div></div>
-    </div>
+      <div class="h-era">Personal Project &#183; Agentic AI &#183; Medical Triage</div>
+      <h3 class="h-ptit">MedSentry &#8212; AI Health Triage</h3>
+      <div class="h-kpis"><span class="h-kpi"><strong>100%</strong><br>Triage Accuracy</span><span class="h-kpi-sep"></span><span class="h-kpi"><strong>3</strong><br>AI Agents</span><span class="h-kpi-sep"></span><span class="h-kpi"><strong>LLM-as-Judge</strong><br>Evaluation</span></div>
+      <p class="h-pdesc">Agentic AI system that monitors a Gmail inbox, extracts patient symptoms, researches conditions via Tavily web search, and replies with tiered HTML guidance — self_care, prompt, or emergency. Three specialized LangChain agents (Symptom Extractor, Disease Researcher, Response Writer) form a pipeline with deterministic safety guardrails: keyword-triggered CPR instructions, Poison Control escalation, drug blocklist, and adversarial-tested edge cases. Evaluated with DeepEval LLM-as-judge: 20/20 triage accuracy, 18/20 condition accuracy.</p>
+      <div class="h-chips"><span class="h-chip">LangChain</span><span class="h-chip">Groq</span><span class="h-chip">Tavily</span><span class="h-chip">Gmail API</span><span class="h-chip">DeepEval</span></div>
+      <div class="h-panel-footer"><a class="h-cta-btn" href="https://github.com/KiranParitala95/MedSentry" target="_blank" rel="noopener">&#9654; View on GitHub</a><div class="h-progress"><div class="h-dot"></div><div class="h-dot"></div><div class="h-dot"></div><div class="h-dot"></div><div class="h-dot cur"></div></div></div>
     </div>
   </div>
 </section>
@@ -607,20 +603,34 @@ body.light .proj-modal{border-left-color:rgba(122,92,10,.15)}
       <div class="sk-connector"></div>
       <div class="sk-pipeline">
 
-        <div class="sk-col">
+        <div class="sk-col sk-col-ai">
           <div class="sk-col-head">
-            <div class="sk-col-icon">📥</div>
-            <div class="sk-col-label">Ingest</div>
+            <div class="sk-col-icon">🤖</div>
+            <div class="sk-col-label">Agentic AI</div>
           </div>
           <div class="sk-col-body">
-            <span class="ski p">Apache Kafka</span>
-            <span class="ski p">Kafka Connect</span>
-            <span class="ski p">Spark Structured Streaming</span>
-            <span class="ski">REST API Design</span>
-            <span class="ski">MySQL</span>
-            <span class="ski">PostgreSQL</span>
-            <span class="ski">FastAPI</span>
-            <span class="ski">Gmail API</span>
+            <span class="ski p">Agentic AI</span>
+            <span class="ski p">RAG</span>
+            <span class="ski p">LangChain</span>
+            <span class="ski p">LangGraph</span>
+            <span class="ski p">LlamaIndex</span>
+          </div>
+        </div>
+
+        <div class="sk-col-arrow">→</div>
+
+        <div class="sk-col">
+          <div class="sk-col-head">
+            <div class="sk-col-icon">🧠</div>
+            <div class="sk-col-label">LLM Tooling</div>
+          </div>
+          <div class="sk-col-body">
+            <span class="ski p">LLM Evaluation</span>
+            <span class="ski p">PyTorch</span>
+            <span class="ski p">HuggingFace</span>
+            <span class="ski p">MCP</span>
+            <span class="ski p">Vector Databases</span>
+            <span class="ski">(FAISS · ChromaDB)</span>
           </div>
         </div>
 
@@ -629,19 +639,14 @@ body.light .proj-modal{border-left-color:rgba(122,92,10,.15)}
         <div class="sk-col">
           <div class="sk-col-head">
             <div class="sk-col-icon">⚡</div>
-            <div class="sk-col-label">Process</div>
+            <div class="sk-col-label">Data Engineering</div>
           </div>
           <div class="sk-col-body">
             <span class="ski p">Python</span>
-            <span class="ski p">PySpark</span>
             <span class="ski p">Apache Spark</span>
-            <span class="ski p">dbt</span>
-            <span class="ski">pandas</span>
-            <span class="ski">Apache Airflow</span>
-            <span class="ski">Databricks</span>
-            <span class="ski">SQL</span>
-            <span class="ski">openpyxl</span>
-            <span class="ski">regex</span>
+            <span class="ski p">Apache Kafka</span>
+            <span class="ski p">Apache Airflow</span>
+            <span class="ski p">Databricks</span>
           </div>
         </div>
 
@@ -650,17 +655,14 @@ body.light .proj-modal{border-left-color:rgba(122,92,10,.15)}
         <div class="sk-col">
           <div class="sk-col-head">
             <div class="sk-col-icon">🏔</div>
-            <div class="sk-col-label">Store</div>
+            <div class="sk-col-label">Store &amp; Transform</div>
           </div>
           <div class="sk-col-body">
+            <span class="ski p">dbt</span>
+            <span class="ski p">Snowflake</span>
             <span class="ski p">Delta Lake</span>
             <span class="ski p">Apache Iceberg</span>
-            <span class="ski">Snowflake</span>
-            <span class="ski">GCP BigQuery</span>
-            <span class="ski">AWS Redshift</span>
-            <span class="ski">Microsoft Fabric</span>
-            <span class="ski">JSON · CSV</span>
-            <span class="ski">SQLite</span>
+            <span class="ski p">Kubernetes</span>
           </div>
         </div>
 
@@ -668,68 +670,19 @@ body.light .proj-modal{border-left-color:rgba(122,92,10,.15)}
 
         <div class="sk-col">
           <div class="sk-col-head">
-            <div class="sk-col-icon">🛡</div>
-            <div class="sk-col-label">Govern</div>
+            <div class="sk-col-icon">📊</div>
+            <div class="sk-col-label">Analytics &amp; Cloud</div>
           </div>
           <div class="sk-col-body">
-            <span class="ski p">Great Expectations</span>
-            <span class="ski p">DataHub</span>
-            <span class="ski p">MLflow</span>
-            <span class="ski">Terraform</span>
-            <span class="ski">Docker</span>
-            <span class="ski">Jenkins</span>
-            <span class="ski">GitHub Actions</span>
-            <span class="ski">Git / GitHub</span>
-            <span class="ski p">DeepEval</span>
+            <span class="ski p">SQL</span>
+            <span class="ski p">Pandas</span>
+            <span class="ski p">Power BI</span>
+            <span class="ski p">Tableau</span>
+            <span class="ski p">GCP BigQuery</span>
+            <span class="ski p">AWS S3 · Glue · Redshift · Athena</span>
           </div>
         </div>
 
-        <div class="sk-col-arrow">→</div>
-
-        <div class="sk-col sk-col-ai">
-          <div class="sk-col-head">
-            <div class="sk-col-icon">🧠</div>
-            <div class="sk-col-label">AI / ML</div>
-          </div>
-          <div class="sk-col-body">
-            <span class="ski p">LangChain</span>
-            <span class="ski p">LangGraph</span>
-            <span class="ski p">TensorFlow</span>
-            <span class="ski p">RAG</span>
-            <span class="ski">HuggingFace</span>
-            <span class="ski">scikit-learn</span>
-            <span class="ski">Tavily API</span>
-            <span class="ski">LSTM · Isolation Forest</span>
-            <span class="ski">FAISS · ChromaDB</span>
-            <span class="ski">Groq · Claude API</span>
-            <span class="ski">LLaMA 3.1 · 3.3</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Cloud platforms row -->
-    <div class="sk-cloud rv">
-      <div class="sk-cloud-label">☁ Cloud</div>
-      <div class="sk-cloud-tags">
-        <span class="sk-ctag">AWS — S3 · Lambda · Glue</span>
-        <span class="sk-ctag">Azure — Synapse · Data Lake Gen2</span>
-        <span class="sk-ctag">GCP — BigQuery</span>
-        <span class="sk-ctag">Microsoft Fabric</span>
-        <span class="sk-ctag">Databricks</span>
-      </div>
-    </div>
-
-    <!-- Supporting tools row -->
-    <div class="sk-cloud rv" style="margin-top:12px">
-      <div class="sk-cloud-label">🔧 Tools</div>
-      <div class="sk-cloud-tags">
-        <span class="sk-ctag">Power BI · Tableau · Grafana</span>
-        <span class="sk-ctag">PagerDuty · Slack API</span>
-        <span class="sk-ctag">pytest · unittest.mock · DeepEval</span>
-        <span class="sk-ctag">Drift Detection · Model Monitoring</span>
-        <span class="sk-ctag">Agile · Scrum</span>
       </div>
     </div>
   </div>
@@ -747,8 +700,8 @@ body.light .proj-modal{border-left-color:rgba(122,92,10,.15)}
         <line id="exp-line" x1="1" y1="0" x2="1" y2="0" stroke="url(#eg)" stroke-width="1.5"/>
       </svg>
       <div class="exp-l rv">
-        <div class="exc"><div class="exh"><div><div class="exr">Graduate Teaching Assistant</div><div class="exco">Cleveland State University · Cleveland, OH</div></div><div class="expd">Jan 2026 – May 2026</div></div><ul class="exbl"><li class="exb"><span class="exar">→</span>Led weekly SQL labs for 50+ students covering joins, correlated/uncorrelated subqueries, window functions, CTEs, and query execution plans.</li><li class="exb"><span class="exar">→</span>Solved complex multi-table SQL assignments directly with students, diagnosing logic errors in GROUP BY, HAVING, and NULL handling.</li><li class="exb"><span class="exar">→</span>Collaborated with Dr. Chung on designing and refining lab assignments and exams to test genuine schema understanding over memorization.</li><li class="exb"><span class="exar">→</span>Supported exam correction, resolving grading discrepancies on ambiguous SQL problems and maintaining scoring consistency across the cohort.</li><li class="exb"><span class="exar">→</span>Held independent office hours diagnosing join/subquery errors and coaching students toward independent debugging.</li><li class="exb"><span class="exar">→</span>Identified recurring conceptual gaps across labs and exams with Dr. Chung, proactively designing supplemental SQL exercises to close them.</li></ul></div>
-        <div class="exc"><div class="exh"><div><div class="exr">Software Engineer — Data Engineering</div><div class="exco">Airtel · India</div></div><div class="expd">Oct 2021 – Feb 2024</div></div><ul class="exbl"><li class="exb"><span class="exar">→</span>Engineered TB-scale ETL/ELT pipelines in Python, PySpark, and SQL, ingesting from MySQL, PostgreSQL, Kafka, and REST APIs into BigQuery, Redshift, and Snowflake.</li><li class="exb"><span class="exar">→</span>Built real-time streaming pipelines using Kafka, Kafka Connect (CDC), and Spark Structured Streaming into Delta Lake and Apache Iceberg.</li><li class="exb"><span class="exar">→</span>Architected Medallion Architecture (Bronze/Silver/Gold) across Azure Synapse, Azure Data Lake Gen2, Microsoft Fabric, Snowflake, and BigQuery.</li><li class="exb"><span class="exar">→</span>Cut query scan costs 60–70% through partitioning, clustering, and Z-ordering; tuned PySpark/Databricks jobs for performance.</li><li class="exb"><span class="exar">→</span>Enforced data quality with dbt and Great Expectations, integrated into Airflow DAGs; built FastAPI internal tooling with Docker and pytest.</li><li class="exb"><span class="exar">→</span>Implemented MLflow experiment tracking, model monitoring, and drift detection via Grafana, backed by Terraform-provisioned infrastructure.</li><li class="exb"><span class="exar">→</span>Managed data lineage and cataloging with DataHub and AWS Glue; delivered reporting through Power BI and Tableau.</li><li class="exb"><span class="exar">→</span>Supported ML feature pipelines (pandas) for churn/usage models, ran on-call incident response via PagerDuty, and mentored junior engineers.</li></ul></div>
+        <div class="exc"><div class="exh"><div><div class="exr">Data Engineer</div><div class="exco">State of Nevada · Contract · On-site</div></div><div class="expd">Sep 2025 – Present · Carson City, NV</div></div></div>
+        <div class="exc"><div class="exh"><div><div class="exr">Software Engineer — Data Engineering</div><div class="exco">Airtel · India</div></div><div class="expd">Oct 2021 – Feb 2024</div></div></div>
         <div class="exc"><div class="exh"><div><div class="exr">MS in Computer Science</div><div class="exco">Cleveland State University · Cleveland, OH</div></div><div class="expd">May 2026</div></div></div>
       </div>
     </div>
@@ -789,7 +742,6 @@ body.light .proj-modal{border-left-color:rgba(122,92,10,.15)}
       <span class="fbr">Kiran Paritala © 2026</span>
       <a href="https://kiranparitala.dev" class="fbr" style="font-style:normal;font-size:12px;color:var(--g2);text-decoration:none;letter-spacing:.05em;transition:color .2s" onmouseover="this.style.color='var(--g1)'" onmouseout="this.style.color='var(--g2)'">kiranparitala.dev</a>
       <div class="fls">
-        
       </div>
     </div>
   </div>
